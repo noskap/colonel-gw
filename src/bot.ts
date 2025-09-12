@@ -35,7 +35,7 @@ export class Bot {
   // Helper method to send a random message to the channel
   private async sendRandomMessage(client: Client): Promise<void> {
     try {
-      const channelId = process.env.DISCORD_CHANNEL_ID;
+      const channelId = process.env.CHANNEL_ID;
       if (!channelId) {
         console.error('No channel ID provided in environment variables');
         return;

@@ -17,7 +17,7 @@ const client = new Client({
 const bot = new Bot();
 
 // Login to Discord with your token
-client.login(process.env.DISCORD_TOKEN);
+client.login(process.env.BOT_TOKEN);
 
 // When client is ready
 client.once('ready', () => {
