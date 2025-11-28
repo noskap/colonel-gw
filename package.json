@@ -6,6 +6,7 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc",
+    "prod": "npm run build && node dist/index.js",
     "dev": "ts-node-dev src/index.ts"
   },
   "dependencies": {
