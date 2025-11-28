@@ -1,7 +1,7 @@
 {
-  "name": "discord-scheduled-bot",
+  "name": "discord-webhook-messenger",
   "version": "1.0.0",
-  "description": "A Discord bot that sends random messages at scheduled intervals.",
+  "description": "A service that sends random messages to Discord via webhook at scheduled intervals.",
   "main": "src/index.ts",
   "scripts": {
     "start": "ts-node src/index.ts",
@@ -9,7 +9,7 @@
     "dev": "ts-node-dev src/index.ts"
   },
   "dependencies": {
-    "discord.js": "^14.0.0",
+    "axios": "^1.6.0",
     "dotenv": "^10.0.0"
   },
   "devDependencies": {
