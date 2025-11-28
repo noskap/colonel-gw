@@ -15,7 +15,6 @@ export class Bot {
     // Method to start sending messages every 5 minutes
     public startSendingMessages(): void {
         this.init();
-        )
         console.log('Starting scheduled messages...');
 
         // Clear any existing interval
