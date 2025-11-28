@@ -2,10 +2,10 @@ export const messages = [
   `...Infiltrate... 
 ...the enemy fortress... 
 ...Outer Heaven!
-...Destroy... 
+...Destroy...
 ...the final weapon... 
 ...Metal Gear!`,
-  "President Baker should be somewhere to the south of where you blasted through the wall. Hurry and save him before the terrorists discover his code.",
+  "President Baker should be somewhere to the south of where you blasted through the wall.\nHurry and save him before the terrorists discover his code.",
   `You got a PSG-1? You can use that against Sniper Wolf. \nHurry up and save Meryl!`,
   "Your mission is to infiltrate the fortress Galuade, rescue the hostages and neutralize Metal Gear before its assembly is complete.",
   "Variety Level 13 \nRescue Meryl \nThe \"Return of Genola.\"",
@@ -15,8 +15,8 @@ export const messages = [
   "You seem to get a real thrill out of slaughtering the enemy. Are you frustrated about something?",
   "I was a North American Fall Webworm in my past life. Those were the good old days... What were you in your former life?",
   "Even my patience has its limits. I just can't leave this thing up to you any longer. I'll do the fighting! You can just go home!",
-  "Actually, I am in really bad shape financially. I pay money to my ex-wife as part of our divorce settlement, among other bills... I just had no choice but to make you pay for lunch the other day. I'm really sorry.",
-  "Actually, there is something I have been meaning to tell you but I just couldn't... I think you should know, though. On Saturday morning last week I saw a guy leaving Rosemary's room... How should I put it, it was like they were ... \"intimate.\" I'm sorry. Sorry to bring this up during the mission, but...",
+  "Actually, I am in really bad shape financially. I pay money to my ex-wife as part of our divorce settlement, among other bills...\nI just had no choice but to make you pay for lunch the other day. I'm really sorry.",
+  "Actually, there is something I have been meaning to tell you but I just couldn't...\nI think you should know, though. On Saturday morning last week I saw a guy leaving Rosemary's room...\nHow should I put it, it was like they were ... \"intimate.\" I'm sorry. Sorry to bring this up during the mission, but...",
   "An Anemone or Clematis plant's juice can cause a rash. When pruning them it's a good idea to wear gloves.",
   "Big Boss here... \nEnter the track on the bridge to the right... \nOver.",
   "I say again. \nYour duty is to infiltrate Zanzibar Land. And seize Kio Marf, an abducted Czechoslovakian biologist.",
@@ -26,9 +26,9 @@ export const messages = [
   "Snake, destroy the power plant's main turbine. It's located in the B1 floor of the plant. Break into the B1 floor.",
   "Variety Level 7 Shoot down the space invaders! Training will have to be postponed if we are invaded by UFOs.",
   "Weapon Mode Socom Level 01 \nDestroy all targets to reach the goal! \nNumber of targets: 3.",
-  "Snake, remember what De Gaulle said: \"The graveyards are full of indispensable men.\" Snake, you're all alone and surrounded by bad guys. Try to be careful and avoid getting into a fight whenever you can.",
-  "Snake, like Shakespeare said: \"Nought's had, all's spent, Where our desire is got without content.\" Basically, it means that your desire can get you into trouble if you're not careful. That goes for Items too. Don't get too greedy or you might be sorry. Be careful, Snake.",
-  "Listen, you haven't reported in for a long time until now. You think you can just CALL only when you want something? You disappoint me.",
+  "Snake, remember what De Gaulle said: \"The graveyards are full of indispensable men.\"\n\nSnake, you're all alone and surrounded by bad guys. Try to be careful and avoid getting into a fight whenever you can.",
+  "Snake, like Shakespeare said: \"Nought's had, all's spent, Where our desire is got without content.\"\nBasically, it means that your desire can get you into trouble if you're not careful. That goes for Items too.\nDon't get too greedy or you might be sorry. Be careful, Snake.",
+  "Listen, you haven't reported in for a long time until now.\nYou think you can just CALL only when you want something?\nYou disappoint me.",
   `Communicator Entertainment Program Idea Spy 2.5 (Two-point-five) Episode 1 
 
 New York. Here in the city where dreams come true and desires rule, something is being bought, sold and thrown away, even as we speak. But behind the scenes of business as usual, the nefarious J.E. (Junker Expensive) Corporation lines its already bloated coffers with profits from worthless products. As J.E. swindles yet another innocent into purchasing high-priced junk...the FBI mobilizes a top-secret task force to put a stop to the menace. Now, the city's best-kept secret spy is out there, briefed and ready to protect the people from J.E., the catalogue of conspiracy -- just call him 2.5 (Two-point-five).`,
