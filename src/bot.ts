@@ -34,11 +34,20 @@ export class Bot {
             clearInterval(this.interval);
         }
 
-        // Set interval to send a message every (66 * 2) minutes
-        // Or 5 seconds if in test mode
-        const intervalDuration = this.isTestMode
-            ? 5 * 1000
-            : (66 * 2) * 60 * 1000;
+        // Determine interval duration
+        let intervalDuration = (66 * 2) * 60 * 1000; // Default: ~132 minutes
+
+        if (this.isTestMode) {
+            intervalDuration = 5 * 1000; // 5 seconds in test mode
+        } else if (process.env.MESSAGE_INTERVAL_MINUTES) {
+            const minutes = parseInt(process.env.MESSAGE_INTERVAL_MINUTES, 10);
+            if (!isNaN(minutes) && minutes > 0) {
+                intervalDuration = minutes * 60 * 1000;
+                console.log(`Interval set to ${minutes} minutes via environment variable.`);
+            } else {
+                console.warn('Invalid MESSAGE_INTERVAL_MINUTES provided, using default.');
+            }
+        }
 
         this.interval = setInterval(() => {
             void this.sendRandomMessage();
