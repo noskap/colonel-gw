@@ -1,14 +1,26 @@
 import axios from 'axios';
-import {getRandomMessage} from './utils/messageUtils';
+import { getRandomMessage } from './utils/messageUtils';
 
 
 export class Bot {
     private WEBHOOK_URL: string | undefined;
     private interval: NodeJS.Timeout | null = null;
+    private isTestMode: boolean = false;
 
     private init(): void {
-        if (!this.WEBHOOK_URL && process.env.WEBHOOK_URL) {
+        // Check for --test flag
+        if (process.argv.includes('--test')) {
+            this.isTestMode = true;
+            console.log('Running in Test Mode (Messages will be logged to console)');
+        }
+
+        if (process.env.WEBHOOK_URL) {
             this.WEBHOOK_URL = process.env.WEBHOOK_URL;
+        }
+
+        if (!this.WEBHOOK_URL && !this.isTestMode) {
+            console.error('No webhook URL provided in environment variables and not in test mode.');
+            process.exit(1);
         }
     }
 
@@ -23,9 +35,14 @@ export class Bot {
         }
 
         // Set interval to send a message every (66 * 2) minutes
+        // Or 5 seconds if in test mode
+        const intervalDuration = this.isTestMode
+            ? 5 * 1000
+            : (66 * 2) * 60 * 1000;
+
         this.interval = setInterval(() => {
             void this.sendRandomMessage();
-        }, (66 * 2) * 60 * 1000);
+        }, intervalDuration);
 
         // Send an initial message right away
         void this.sendRandomMessage();
@@ -43,12 +60,18 @@ export class Bot {
     // Helper method to send a random message via webhook
     private async sendRandomMessage(): Promise<void> {
         try {
-            if (!this.WEBHOOK_URL) {
-                console.error('No webhook URL provided in environment variables');
+            const randomMessage = getRandomMessage();
+
+            if (this.isTestMode) {
+                console.log(`[TEST MODE] ${randomMessage}`);
                 return;
             }
 
-            const randomMessage = getRandomMessage();
+            if (!this.WEBHOOK_URL) {
+                // Should be caught in init, but double check
+                console.error('No webhook URL provided in environment variables');
+                return;
+            }
 
             // Send POST request to Discord webhook
             await axios.post(this.WEBHOOK_URL, {
