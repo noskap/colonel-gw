@@ -1,7 +1,8 @@
 module.exports = {
   apps: [{
-    name: 'discord-webhook-messenger',
-    script: 'npm run prod',
+    name: 'gw',
+    script: 'src/index.ts',
+    interpreter: 'bun',
     instances: 1,
     autorestart: true,
     watch: false,
